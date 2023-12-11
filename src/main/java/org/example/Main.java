@@ -35,8 +35,6 @@ public class Main extends ListenerAdapter {
 
     @Override
     public void onMessageReceived(@NotNull MessageReceivedEvent event) {
-//        System.out.println(event.getMessage());
-//        System.out.println(event.getMessage().getAuthor().getId());
 
         if (!event.getAuthor().isBot() && event.getMessage().getContentRaw().trim().startsWith("&", 0)) {
             String response = Response.getResponse(event.getMessage().getContentRaw(), event.getMessage().getAuthor().getId());
